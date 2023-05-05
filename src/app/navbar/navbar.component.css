@@ -1,0 +1,17 @@
+nav {
+    z-index: 1000;
+    background-color: #131722;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+.searchplace{
+    background-color: white;
+    color: black;
+    padding: 5px 20px;
+    position: absolute;
+    width: 400px;
+    top: 50px;
+    right: 0;
+    opacity: 90%;
+}

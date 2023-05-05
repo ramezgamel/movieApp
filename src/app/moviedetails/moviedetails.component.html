@@ -1,0 +1,49 @@
+<!-- <div class="conatiner">
+  <div class="row">
+    <div class="col-md-4">
+      <img class="w-100" [src]="imgPrefix + details?.poster_path" alt="" />
+    </div>
+    <div class="col-md-8" >
+        <ng-container [ngSwitch]="type">
+            <h3 *ngSwitchCase="'movie'">{{details.original_title}}</h3>
+            <h3 *ngSwitchCase="'tv'">{{details.name}}</h3>
+            <h3 *ngSwitchCase="'people'">{{details.name}}</h3>
+        </ng-container>
+        <p>{{ details.overview }}</p>
+    </div>
+    </div>
+</div> -->
+<div class="conatiner">
+  <div class="row">
+    <ng-container [ngSwitch]="type">
+      <ng-container *ngSwitchCase="'movie'">
+        <div class="col-md-4">
+          <img class="w-100" [src]="imgPrefix + details?.poster_path" alt="" />
+        </div>
+        <div class="col-md-8" >
+          <h3>{{details.original_title}}</h3>                     
+          <p>{{ details.overview }}</p>
+        </div>
+      </ng-container>
+      <ng-container *ngSwitchCase="'tv'">
+        <div class="col-md-4">
+          <img class="w-100" [src]="imgPrefix + details?.poster_path" alt="" />
+        </div>
+        <div class="col-md-8" >
+          <h3>{{details.name}}</h3>                     
+          <p>{{ details.overview }}</p>
+        </div>
+      </ng-container>
+      <ng-container *ngSwitchCase="'person'">
+        <div class="col-md-4">
+          <img class="w-100" [src]="imgPrefix + details?.profile_path" alt="" />
+        </div>
+        <div class="col-md-8" >
+          <h3>{{details.name}}</h3>                     
+          <p>{{ details.biography }}</p>
+          <p>{{ details.birthday }}</p>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>

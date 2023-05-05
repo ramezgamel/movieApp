@@ -1,0 +1,46 @@
+.head {
+    position: relative;
+}
+.head::before {
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 1px;
+    background-color: #a8a8a83d;
+    top: 50px;
+}
+.head::after {
+    content: "";
+    position: absolute;
+    width: 75%;
+    height: 1px;
+    background-color: #a8a8a83d;
+    bottom: 50px;
+}
+section {
+    background-image: url(../../assets/background.webp);
+    background-size: cover;
+}
+.container h1 {
+    font-family: 'Segoe UI';
+}
+a {
+    text-decoration: none;
+}
+
+.img {
+    overflow: hidden;
+}
+.overview {
+    position: absolute;
+    max-width: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    bottom: -100%;
+    font-size: 13px;
+    padding: 4px;
+    color: white;
+    transition: .5s;
+}
+a:hover .overview {
+    bottom: -15px;
+}

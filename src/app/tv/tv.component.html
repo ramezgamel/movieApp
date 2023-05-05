@@ -1,0 +1,13 @@
+<div class="container pt-5">
+  <div class="row pt-5">
+  <div *ngFor="let movie of tvShow" class="col-md-2 position-relative">
+            <div class="position-relative">
+                <a [routerLink]='["/tv", movie.id]'>
+                    <img [src]="imgPrefix + movie.poster_path" class="w-100" [alt]="movie.title">
+                    <h5 class="h5">{{movie.title}}</h5>
+                    <div class="vote">{{movie.vote_average| number:'1.0-1'}}</div>
+                </a>
+            </div>
+  </div>
+</div>
+</div>c
